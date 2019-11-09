@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,12 +8,22 @@ public class TowerHeightChecker : MonoBehaviour
 
 
 
-    private Collider2D collider;
+    private SpriteRenderer spriteRenderer;
+
 
     [SerializeField]
-    private float numberOfRays, blockVelocityThreshhold, towerHeight;
+    private SpriteRenderer groundSprite;
+
+    [SerializeField]
+    private float numberOfRays, blockVelocityThreshhold, cameraMoveThreshhold;
 
 
+    [SerializeField]
+    private FloatReference towerHeight;
+
+
+    [SerializeField]
+    private CameraFollowsTower cameraFollow;
 
     private float distanceToGround;
 
@@ -22,14 +33,11 @@ public class TowerHeightChecker : MonoBehaviour
     [SerializeField]
     private GameObject ground;
 
-
-    //[SerializeField]
-    //private float ;
+      
 
     private void Awake()
     {
-        collider = GetComponent<Collider2D>();
-        distanceToGround = collider.transform.position.y - ground.transform.position.y;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
 
@@ -44,9 +52,11 @@ public class TowerHeightChecker : MonoBehaviour
     private void MeasureHeight()
     {
 
-        Bounds boxBounds = collider.bounds;
-        Vector2 rayOrigin = new Vector2(boxBounds.center.x - boxBounds.extents.x, boxBounds.center.y - (boxBounds.extents.y+ 0.1f));
-        
+        Vector2 rayOrigin =  transform.position + new Vector3(-spriteRenderer.bounds.extents.x, -spriteRenderer.bounds.extents.y, 0.0f);
+
+        float groundHeight =  groundSprite.transform.position.y + groundSprite.bounds.extents.y;
+        distanceToGround = ground.transform.position.y + spriteRenderer.transform.position.y ;
+
 
         float shortestRay = distanceToGround;
 
@@ -73,33 +83,33 @@ public class TowerHeightChecker : MonoBehaviour
                     if (blockRigidBoy.velocity.x < blockVelocityThreshhold && blockRigidBoy.velocity.y < blockVelocityThreshhold)
                     {                       
                         if (hit.distance < shortestRay)
-                            shortestRay = hit.distance;
+                        {
+                            shortestRay = hit.distance;      
+                            CheckToMoveCamera(shortestRay);
+                        }
 
                     }
 
                 }
             }
 
-            float nextRaySpacing = (boxBounds.extents.x * 2.0f) / (numberOfRays - 1f);
+            float nextRaySpacing = (spriteRenderer.bounds.size.x) / (numberOfRays - 1f);
             rayOrigin += Vector2.right * nextRaySpacing;
         }
 
 
 
-        towerHeight = distanceToGround - shortestRay;
-
-
-
-
-
-
-
+        towerHeight.value = distanceToGround - shortestRay;
     }
 
+    private void CheckToMoveCamera(float distance)
+    {
+        if(distance < cameraMoveThreshhold)
+            cameraFollow.moving = true;
+        else
+            cameraFollow.moving = false;
 
-
-
-
+    }
 }
 
 
