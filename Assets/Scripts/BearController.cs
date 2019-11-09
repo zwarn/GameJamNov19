@@ -41,9 +41,18 @@ public class BearController : MonoBehaviour
         transform.position += new Vector3(horizontalMovement, 0,0);
 
         IsStandingOnGround();
+
+        CheckIfPlayerDies();
     }
 
-
+    private void CheckIfPlayerDies()
+    {
+        Rect cameraRect = Camera.main.rect;
+        if (transform.position.y < Camera.main.ScreenToWorldPoint(new Vector3(0, cameraRect.yMax)).y)
+        {
+            GameManager.Instance.PlayerDies();
+        }
+    }
 
 
 

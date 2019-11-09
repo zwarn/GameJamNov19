@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    private static GameManager instance;
     private float bearHeight;
     [SerializeField] private GameObject gameOverScreen;
     [SerializeField] private GameObject bearPrefab;
     [SerializeField] private GameObject bearPlayerInstance;
     [SerializeField] private Transform bearSpawnTransform;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +31,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void PlayerDies()
+    public void PlayerDies()
     {
         Destroy(bearPlayerInstance);
         gameOverScreen.SetActive(true);
@@ -38,4 +44,6 @@ public class GameManager : MonoBehaviour
         gameOverScreen.SetActive(false);
         bearPlayerInstance = Instantiate(bearPrefab, bearSpawnTransform.position, Quaternion.identity);
     }
+
+    public static GameManager Instance { get => instance; }
 }
