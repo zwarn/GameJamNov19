@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1439316842895490718}
   - component: {fileID: 4132485525994628814}
   - component: {fileID: 3504770163009112096}
+  - component: {fileID: -7425482030197190993}
   m_Layer: 0
   m_Name: square
   m_TagString: Untagged
@@ -97,7 +98,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -132,3 +133,15 @@ PolygonCollider2D:
       - {x: -1.505, y: -1.505}
       - {x: 1.505, y: -1.505}
       - {x: 1.505, y: 1.505}
+--- !u!114 &-7425482030197190993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8359678162027308087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38080b6dd31df245a7fdc840a656ca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

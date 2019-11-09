@@ -2,23 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObstacleChooser : MonoBehaviour
+public class Obstacle : MonoBehaviour
 {
-    private Color mouseOverColor = Color.blue;
-    private Color originalColor = Color.white;
     private bool dragging = false;
     private bool isDragable = true;
     private float distance;
-    [SerializeField] private Rigidbody2D rigidbody2D;
+    private Rigidbody2D rigidbody2D;
+    private bool hasObjectSpawned = false;
 
-    void OnMouseEnter()
+    void Start()
     {
-        GetComponent<Renderer>().material.color = mouseOverColor;
-    }
- 
-    void OnMouseExit()
-    {
-        GetComponent<Renderer>().material.color = originalColor;
+        rigidbody2D = GetComponent<Rigidbody2D>();
     }
  
     void OnMouseDown()
@@ -34,6 +28,7 @@ public class ObstacleChooser : MonoBehaviour
     {
         dragging = false;
         isDragable = false;
+        rigidbody2D.gravityScale = 1.0f;
     }
  
     void Update()
@@ -42,7 +37,15 @@ public class ObstacleChooser : MonoBehaviour
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Vector3 rayPoint = ray.GetPoint(distance);
-            transform.position = rayPoint;
+            transform.position = new Vector3(rayPoint.x, transform.position.y);
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (!hasObjectSpawned)
+        {
+            ObstacleSpawner.Instance.SpawnNextRandomBlock();
+            hasObjectSpawned = true;
         }
     }
 }

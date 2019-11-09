@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5593421429762220184}
   - component: {fileID: 4448996723529820033}
   - component: {fileID: 8352719725924049043}
+  - component: {fileID: -9089109059621358541}
   m_Layer: 0
   m_Name: Y
   m_TagString: Untagged
@@ -97,7 +98,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -128,11 +129,25 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.195, y: 2.155}
+    - - {x: 0.093647, y: 0.71882784}
+      - {x: 0.08576918, y: 2.155}
       - {x: -1.555, y: 2.155}
       - {x: -1.555, y: -2.165}
       - {x: -1.485, y: -2.215}
-      - {x: 0.185, y: -2.215}
+      - {x: 0.03207636, y: -2.2368462}
+      - {x: 0.05729246, y: -0.7832756}
       - {x: 1.485, y: -0.805}
       - {x: 1.555, y: -0.755}
       - {x: 1.555, y: 0.695}
+--- !u!114 &-9089109059621358541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300174794744195268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38080b6dd31df245a7fdc840a656ca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

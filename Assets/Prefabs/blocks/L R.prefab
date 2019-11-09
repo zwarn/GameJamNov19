@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2220881556935336443}
   - component: {fileID: 7639972391792390}
   - component: {fileID: 4547530803871836685}
+  - component: {fileID: -9176309218163418543}
   m_Layer: 0
   m_Name: L R
   m_TagString: Untagged
@@ -97,7 +98,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -128,11 +129,24 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.16499999, y: 2.115}
-      - {x: -1.545, y: -0.285}
+    - - {x: -0.057174444, y: 2.115}
+      - {x: -0.04728341, y: -0.47905293}
+      - {x: -1.5449998, y: -0.479086}
       - {x: -1.545, y: -2.115}
       - {x: -1.475, y: -2.165}
       - {x: 1.515, y: -2.165}
       - {x: 1.5649999, y: -2.115}
       - {x: 1.5649999, y: 2.085}
       - {x: 1.505, y: 2.115}
+--- !u!114 &-9176309218163418543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7546721389920243596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38080b6dd31df245a7fdc840a656ca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1818880641012119563}
   - component: {fileID: 2260943384599485367}
   - component: {fileID: 8551001389712678987}
+  - component: {fileID: 7789140679223026244}
   m_Layer: 0
   m_Name: Z R
   m_TagString: Untagged
@@ -97,7 +98,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -128,11 +129,26 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.195, y: 2.11}
+    - - {x: 0.09457514, y: 0.6884508}
+      - {x: 0.107477754, y: 2.066238}
+      - {x: 0.195, y: 2.11}
       - {x: -1.605, y: 2.11}
-      - {x: -1.605, y: -0.95}
-      - {x: -0.21499999, y: -2.19}
+      - {x: -1.5831192, y: -0.8624768}
+      - {x: -0.0793598, y: -0.86907864}
+      - {x: -0.105596304, y: -2.19}
       - {x: 1.475, y: -2.19}
       - {x: 1.525, y: -2.12}
       - {x: 1.525, y: 0.65}
       - {x: 1.435, y: 0.71999997}
+--- !u!114 &7789140679223026244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725175565527678375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38080b6dd31df245a7fdc840a656ca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
