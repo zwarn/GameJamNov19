@@ -9,6 +9,7 @@
         <e p="Scripts" t="Include">
           <e p="BearController.cs" t="Include" />
           <e p="FollowCamera.cs" t="Include" />
+          <e p="ToyChooser.cs" t="Include" />
         </e>
       </e>
       <e p="GameJamNov19.sln" t="IncludeFlat" />
