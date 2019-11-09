@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2213551305760731743}
   - component: {fileID: 7598136856352158009}
   - component: {fileID: 3788243861697547040}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: easteregg
   m_TagString: block
   m_Icon: {fileID: 0}

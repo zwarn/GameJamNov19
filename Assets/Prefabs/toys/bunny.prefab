@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 52986350105224622}
   - component: {fileID: 6494947047729725825}
   - component: {fileID: 2230454271611194501}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bunny
   m_TagString: block
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4780513179473593396}
   - component: {fileID: 3216597942850338300}
   - component: {fileID: -8578758757379449756}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: rubics_cube
   m_TagString: block
   m_Icon: {fileID: 0}

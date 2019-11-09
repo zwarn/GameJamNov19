@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 920665677757144533}
   - component: {fileID: 86331145033839062}
   - component: {fileID: -6129876049224745212}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ball_in_a_cup
   m_TagString: block
   m_Icon: {fileID: 0}

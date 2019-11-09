@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2418430178957282532}
   - component: {fileID: 1124785969788987748}
   - component: {fileID: -1258926164438376137}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: real_gun
   m_TagString: block
   m_Icon: {fileID: 0}
