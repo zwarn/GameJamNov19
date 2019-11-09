@@ -22,6 +22,7 @@ public class Obstacle : MonoBehaviour
         {
             distance = Vector3.Distance(transform.position, Camera.main.transform.position);
             dragging = true;
+            gameObject.layer = LayerMask.NameToLayer("Default");
             ObstacleSpawner.Instance.DestroyOtherBlocks(gameObject);
         }
     }

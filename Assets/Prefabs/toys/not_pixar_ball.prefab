@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3844335122381391270}
   - component: {fileID: 4004432205572228709}
   - component: {fileID: 4030714597790544368}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: not_pixar_ball
   m_TagString: block
   m_Icon: {fileID: 0}
