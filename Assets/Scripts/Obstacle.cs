@@ -9,6 +9,7 @@ public class Obstacle : MonoBehaviour
     private float distance;
     private Rigidbody2D rigidbody2D;
     private bool hasObjectSpawned = false;
+    private static bool objectSpawnReady = true;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class Obstacle : MonoBehaviour
         {
             distance = Vector3.Distance(transform.position, Camera.main.transform.position);
             dragging = true;
+            ObstacleSpawner.Instance.DestroyOtherBlocks(gameObject);
         }
     }
  
@@ -28,7 +30,10 @@ public class Obstacle : MonoBehaviour
     {
         dragging = false;
         isDragable = false;
-        rigidbody2D.gravityScale = 1.0f;
+        
+        StartCoroutine(WaitForSpawnDelay());
+
+        rigidbody2D.gravityScale = 0.5f;
     }
  
     void Update()
@@ -40,12 +45,18 @@ public class Obstacle : MonoBehaviour
             transform.position = new Vector3(rayPoint.x, transform.position.y);
         }
     }
-    private void OnCollisionEnter2D(Collision2D other)
+    // private void OnCollisionEnter2D(Collision2D other)
+    // {
+    //     if (!hasObjectSpawned)
+    //     {
+    //         hasObjectSpawned = true;
+    //         StartCoroutine(WaitForSpawnDelay());
+    //     }
+    // }
+
+    private IEnumerator WaitForSpawnDelay()
     {
-        if (!hasObjectSpawned)
-        {
-            ObstacleSpawner.Instance.SpawnNextRandomBlock();
-            hasObjectSpawned = true;
-        }
+        yield return new WaitForSeconds(1.5f);
+        ObstacleSpawner.Instance.SpawnNextRandomBlock();
     }
 }

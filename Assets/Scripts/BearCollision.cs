@@ -21,7 +21,7 @@ public class BearCollision : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("block") && other.rigidbody.velocity.magnitude > deadlyVelocity)
+        if (other.gameObject.CompareTag("block") && other.rigidbody != null && other.rigidbody.velocity.magnitude > deadlyVelocity)
         {
             Debug.Log("die because of velocity " + other.rigidbody.velocity.magnitude);
             Destroy(gameObject);

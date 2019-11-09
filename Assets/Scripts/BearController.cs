@@ -64,7 +64,7 @@ public class BearController : MonoBehaviour
     {
 
         Bounds boxBounds = collider.bounds;
-        Vector2 rayOrigin = new Vector2(boxBounds.center.x - boxBounds.extents.x, boxBounds.center.y - boxBounds.extents.y);
+        Vector2 rayOrigin = new Vector2(boxBounds.center.x - boxBounds.extents.x, boxBounds.center.y - 0.05f - boxBounds.extents.y);
 
         bool atLeastOneRayHittingGround = false;
 
