@@ -4,29 +4,15 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
-    private Color mouseOverColor = Color.yellow;
-    private Color originalColor = Color.white;
     private bool dragging = false;
     private bool isDragable = true;
     private float distance;
-    [SerializeField] private Rigidbody2D rigidbody2D;
+    private Rigidbody2D rigidbody2D;
+    private bool hasObjectSpawned = false;
 
     void Start()
     {
-        originalColor = GetComponent<Renderer>().material.color;
-    }
-
-    void OnMouseEnter()
-    {
-        if (isDragable)
-        {
-            GetComponent<Renderer>().material.color = mouseOverColor;
-        }
-    }
- 
-    void OnMouseExit()
-    {
-        GetComponent<Renderer>().material.color = originalColor;
+        rigidbody2D = GetComponent<Rigidbody2D>();
     }
  
     void OnMouseDown()
@@ -52,6 +38,14 @@ public class Obstacle : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Vector3 rayPoint = ray.GetPoint(distance);
             transform.position = new Vector3(rayPoint.x, transform.position.y);
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (!hasObjectSpawned)
+        {
+            ObstacleSpawner.Instance.SpawnNextRandomBlock();
+            hasObjectSpawned = true;
         }
     }
 }

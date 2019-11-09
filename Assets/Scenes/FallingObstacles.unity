@@ -129,6 +129,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 308563971}
+  - component: {fileID: 308563973}
+  - component: {fileID: 308563972}
   m_Layer: 0
   m_Name: ObstacleSpawner
   m_TagString: Untagged
@@ -150,6 +152,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &308563972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308563970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf23bd4900959c04cb45dcf3a454e5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toys:
+  - {fileID: 3224656347485092589, guid: dcc331b1669687d4d8ca8d6366369a0c, type: 3}
+  - {fileID: 7546721389920243596, guid: b1d53f037ea469649b37feb5a615e321, type: 3}
+  - {fileID: 2102139960575350396, guid: 8b86f9e75f59f8b40a710e1cb4d15882, type: 3}
+  - {fileID: 8359678162027308087, guid: 6105c7edb50258549959f4853556a1c3, type: 3}
+  - {fileID: 1300174794744195268, guid: 405a57f5a1fb6514ba9bffbbce028eab, type: 3}
+  - {fileID: 7099028994758595228, guid: fb7f2d43d04b6aa45a3e22ecf5e57566, type: 3}
+  - {fileID: 1725175565527678375, guid: 8bf44bddad1643b4b955f8a5c37ce1a8, type: 3}
+--- !u!114 &308563973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308563970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f922eacbf1cce8f46ac415f35d787c10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1110506686
 GameObject:
   m_ObjectHideFlags: 0
