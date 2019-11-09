@@ -33,7 +33,7 @@ public class Obstacle : MonoBehaviour
         
         StartCoroutine(WaitForSpawnDelay());
 
-        rigidbody2D.gravityScale = 1.0f;
+        rigidbody2D.gravityScale = 0.5f;
     }
  
     void Update()
