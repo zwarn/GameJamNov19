@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,7 +23,7 @@ public class Obstacle : MonoBehaviour
         {
             distance = Vector3.Distance(transform.position, Camera.main.transform.position);
             dragging = true;
-            gameObject.layer = LayerMask.NameToLayer("Default");
+            gameObject.layer = LayerMask.NameToLayer("Falling");
             ObstacleSpawner.Instance.DestroyOtherBlocks(gameObject);
         }
     }
@@ -46,14 +47,11 @@ public class Obstacle : MonoBehaviour
             transform.position = new Vector3(rayPoint.x, transform.position.y);
         }
     }
-    // private void OnCollisionEnter2D(Collision2D other)
-    // {
-    //     if (!hasObjectSpawned)
-    //     {
-    //         hasObjectSpawned = true;
-    //         StartCoroutine(WaitForSpawnDelay());
-    //     }
-    // }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        gameObject.layer = LayerMask.NameToLayer("Default");
+    }
 
     private IEnumerator WaitForSpawnDelay()
     {

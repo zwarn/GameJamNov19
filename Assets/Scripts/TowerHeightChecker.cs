@@ -33,7 +33,7 @@ public class TowerHeightChecker : MonoBehaviour
     [SerializeField]
     private GameObject ground;
 
-      
+
 
     private void Awake()
     {
@@ -52,14 +52,15 @@ public class TowerHeightChecker : MonoBehaviour
     private void MeasureHeight()
     {
 
-        Vector2 rayOrigin =  transform.position + new Vector3(-spriteRenderer.bounds.extents.x, -spriteRenderer.bounds.extents.y, 0.0f);
+        Vector2 rayOrigin = transform.position + new Vector3(-spriteRenderer.bounds.extents.x, -spriteRenderer.bounds.extents.y, 0.0f);
 
-        float groundHeight =  groundSprite.transform.position.y + groundSprite.bounds.extents.y;
-        distanceToGround = ground.transform.position.y + spriteRenderer.transform.position.y ;
+        float groundHeight = groundSprite.transform.position.y + groundSprite.bounds.extents.y;
+        distanceToGround = ground.transform.position.y + spriteRenderer.transform.position.y;
 
 
         float shortestRay = distanceToGround;
 
+        Debug.DrawRay(rayOrigin, Vector2.down * distanceToGround, Color.red);
 
 
         for (int i = 0; i < numberOfRays; i++)
@@ -68,7 +69,6 @@ public class TowerHeightChecker : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, Mathf.Infinity);
 
 
-            Debug.DrawRay(rayOrigin, Vector2.down * distanceToGround, Color.red);
 
 
 
@@ -76,15 +76,15 @@ public class TowerHeightChecker : MonoBehaviour
             {
                 if (hit.transform.tag == "block")
                 {
-                    
+
                     //checkOtherToo
                     Rigidbody2D blockRigidBoy = hit.transform.gameObject.GetComponent<Rigidbody2D>();
 
                     if (blockRigidBoy.velocity.x < blockVelocityThreshhold && blockRigidBoy.velocity.y < blockVelocityThreshhold)
-                    {                       
+                    {
                         if (hit.distance < shortestRay)
                         {
-                            shortestRay = hit.distance;      
+                            shortestRay = hit.distance;
                             CheckToMoveCamera(shortestRay);
                         }
 
@@ -104,7 +104,7 @@ public class TowerHeightChecker : MonoBehaviour
 
     private void CheckToMoveCamera(float distance)
     {
-        if(distance < cameraMoveThreshhold)
+        if (distance < cameraMoveThreshhold)
             cameraFollow.moving = true;
         else
             cameraFollow.moving = false;
