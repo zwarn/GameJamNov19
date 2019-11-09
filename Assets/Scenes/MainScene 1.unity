@@ -915,6 +915,12 @@ PrefabInstance:
       propertyPath: bearSpawnTransform
       value: 
       objectReference: {fileID: 1490750274}
+    - target: {fileID: 5721050370833934132, guid: d1f54fa17c4d43241bf8862510130c1b,
+        type: 3}
+      propertyPath: towerHeight
+      value: 
+      objectReference: {fileID: 11400000, guid: e5bf8ea35e685af49a86bf7b00972e89,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1f54fa17c4d43241bf8862510130c1b, type: 3}
 --- !u!1 &1796777971
@@ -1265,7 +1271,7 @@ PrefabInstance:
     - target: {fileID: 8027003334555332999, guid: 350b246e9bb82af4ba10176065089a9e,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8027003334555332995, guid: 350b246e9bb82af4ba10176065089a9e,
         type: 3}
