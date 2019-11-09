@@ -76,15 +76,11 @@ public class TowerHeightChecker : MonoBehaviour
 
 
             if (hit)
-            {
-                
-
+            {               
                     //checkOtherToo
                     Rigidbody2D blockRigidBoy = hit.transform.gameObject.GetComponent<Rigidbody2D>();
                 if(blockRigidBoy != null)
-                {
-
-                
+                {               
 
 
                     if (blockRigidBoy.velocity.x < blockVelocityThreshhold && blockRigidBoy.velocity.y < blockVelocityThreshhold)
@@ -93,6 +89,7 @@ public class TowerHeightChecker : MonoBehaviour
                         {
                             shortestRay = hit.distance;
                             CheckToMoveCamera(shortestRay);
+                            print(shortestRay);
                         }
 
                     }
