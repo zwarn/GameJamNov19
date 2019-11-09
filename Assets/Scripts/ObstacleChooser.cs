@@ -9,7 +9,7 @@ public class ObstacleChooser : MonoBehaviour
     private bool dragging = false;
     private bool isDragable = true;
     private float distance;
-    [SerializableField] private Rigidbody2D rigidbody2D;
+    [SerializeField] private Rigidbody2D rigidbody2D;
 
     void OnMouseEnter()
     {
