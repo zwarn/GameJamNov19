@@ -1184,10 +1184,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d398fc0471452947850abe4bd7a8c79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockLayer:
+    serializedVersion: 2
+    m_Bits: 1
   groundSprite: {fileID: 682715310}
   numberOfRays: 33
   blockVelocityThreshhold: 1
-  cameraMoveThreshhold: 1
+  cameraMoveThreshhold: 3
   towerHeight: {fileID: 11400000, guid: e5bf8ea35e685af49a86bf7b00972e89, type: 2}
   cameraFollow: {fileID: 221502660}
   ground: {fileID: 682715308}

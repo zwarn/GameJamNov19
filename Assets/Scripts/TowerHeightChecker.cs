@@ -10,6 +10,8 @@ public class TowerHeightChecker : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
+    [SerializeField]
+    private LayerMask blockLayer;
 
     [SerializeField]
     private SpriteRenderer groundSprite;
@@ -66,7 +68,7 @@ public class TowerHeightChecker : MonoBehaviour
         for (int i = 0; i < numberOfRays; i++)
         {
 
-            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, Mathf.Infinity);
+            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, Mathf.Infinity, blockLayer);
 
 
 
@@ -74,8 +76,7 @@ public class TowerHeightChecker : MonoBehaviour
 
             if (hit)
             {
-                if (hit.transform.tag == "block")
-                {
+                
 
                     //checkOtherToo
                     Rigidbody2D blockRigidBoy = hit.transform.gameObject.GetComponent<Rigidbody2D>();
@@ -90,7 +91,7 @@ public class TowerHeightChecker : MonoBehaviour
 
                     }
 
-                }
+               
             }
 
             float nextRaySpacing = (spriteRenderer.bounds.size.x) / (numberOfRays - 1f);
