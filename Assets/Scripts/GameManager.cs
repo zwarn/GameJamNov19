@@ -7,9 +7,12 @@ public class GameManager : MonoBehaviour
     private static GameManager instance;
     private float bearHeight;
     [SerializeField] private GameObject gameOverScreen;
+    [SerializeField] private GameObject gameFinishedScreen;
     [SerializeField] private GameObject bearPrefab;
     [SerializeField] private GameObject bearPlayerInstance;
     [SerializeField] private Transform bearSpawnTransform;
+    private float playTime;
+    
 
 
     [SerializeField]
@@ -49,6 +52,11 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
         gameOverScreen.SetActive(false);
         bearPlayerInstance = Instantiate(bearPrefab, bearSpawnTransform.position, Quaternion.identity);
+    }
+
+    public void GameFinished()
+    {
+        gameFinishedScreen.SetActive(true);
     }
 
     public static GameManager Instance { get => instance; }

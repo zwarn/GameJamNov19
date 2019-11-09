@@ -13,6 +13,8 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField] private Transform leftObstacle;
     [SerializeField] private Transform obstacleHolder;
 
+    public static int toyCount = 0;
+
     void Awake()
     {
         instance = this;
@@ -58,6 +60,8 @@ public class ObstacleSpawner : MonoBehaviour
         {
             Destroy(middleBlock);
         }
+
+        toyCount++;
     }
 
     public static ObstacleSpawner Instance { get => instance; }
