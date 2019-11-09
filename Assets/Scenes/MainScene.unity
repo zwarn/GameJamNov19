@@ -529,6 +529,76 @@ PrefabInstance:
       objectReference: {fileID: 1836150011}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1f54fa17c4d43241bf8862510130c1b, type: 3}
+--- !u!1 &1726309563
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1726309565}
+  - component: {fileID: 1726309564}
+  - component: {fileID: 1726309566}
+  m_Layer: 0
+  m_Name: Goal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1726309564
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726309563}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0006677769, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.21328938, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &1726309565
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726309563}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 22.87, z: -0.79296875}
+  m_LocalScale: {x: 27, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1726309566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726309563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eab97c28b185fe40a4765c8526efa7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1796777971
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,16 +1012,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5872157042079311868, guid: 5b765d7e110172249803e3faf212893c,
-        type: 3}
-      propertyPath: obstacleHolder
-      value: 
-      objectReference: {fileID: 2032049341}
     - target: {fileID: 7450967061035070963, guid: 5b765d7e110172249803e3faf212893c,
         type: 3}
       propertyPath: cameraMoveThreshhold
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5872157042079311868, guid: 5b765d7e110172249803e3faf212893c,
+        type: 3}
+      propertyPath: obstacleHolder
+      value: 
+      objectReference: {fileID: 2032049341}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b765d7e110172249803e3faf212893c, type: 3}
 --- !u!1001 &8027003332458468863
@@ -970,6 +1040,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8027003334555332999, guid: 350b246e9bb82af4ba10176065089a9e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8027003334555332995, guid: 350b246e9bb82af4ba10176065089a9e,
         type: 3}
@@ -1077,16 +1152,6 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8027003334555332998, guid: 350b246e9bb82af4ba10176065089a9e,
-        type: 3}
-      propertyPath: rayLength
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8027003334555332998, guid: 350b246e9bb82af4ba10176065089a9e,
-        type: 3}
-      propertyPath: numberOfRays
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 8027003334555332997, guid: 350b246e9bb82af4ba10176065089a9e,
         type: 3}
       propertyPath: m_Offset.y
@@ -1111,6 +1176,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8027003334555332998, guid: 350b246e9bb82af4ba10176065089a9e,
+        type: 3}
+      propertyPath: rayLength
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8027003334555332998, guid: 350b246e9bb82af4ba10176065089a9e,
+        type: 3}
+      propertyPath: numberOfRays
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8027003334555332997, guid: 350b246e9bb82af4ba10176065089a9e, type: 3}
