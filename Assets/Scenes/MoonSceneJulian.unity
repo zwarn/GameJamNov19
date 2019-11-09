@@ -243,7 +243,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139803813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.15, y: -2.82, z: 0}
+  m_LocalPosition: {x: 0.15, y: -0.53, z: 0}
   m_LocalScale: {x: 15.946968, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -347,7 +347,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970751416}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.19, z: 0}
+  m_LocalPosition: {x: 0, y: -2.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -396,7 +396,6 @@ GameObject:
   - component: {fileID: 1972891813}
   - component: {fileID: 1972891812}
   - component: {fileID: 1972891811}
-  - component: {fileID: 1972891810}
   - component: {fileID: 1972891809}
   m_Layer: 0
   m_Name: TowerHeightChecker
@@ -417,36 +416,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d398fc0471452947850abe4bd7a8c79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundSprite: {fileID: 1139803816}
   numberOfRays: 20
   blockVelocityThreshhold: 0.2
-  towerHeight: 0
+  cameraMoveThreshhold: 1
+  towerHeight: {fileID: 11400000, guid: e5bf8ea35e685af49a86bf7b00972e89, type: 2}
+  cameraFollow: {fileID: 2032748878}
   ground: {fileID: 1139803813}
---- !u!61 &1972891810
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1972891808}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!50 &1972891811
 Rigidbody2D:
   serializedVersion: 4
@@ -524,12 +500,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1972891808}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.15, y: 3.94, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.23, y: 3.49, z: 10}
   m_LocalScale: {x: 15.946968, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 2032748877}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2032748874
 GameObject:
@@ -542,6 +518,7 @@ GameObject:
   - component: {fileID: 2032748877}
   - component: {fileID: 2032748876}
   - component: {fileID: 2032748875}
+  - component: {fileID: 2032748878}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -610,7 +587,22 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1972891813}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2032748878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032748874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0c1fb129a384474ab4dbbac77c0faee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraMoveSpeed: 2
+  moving: 0
