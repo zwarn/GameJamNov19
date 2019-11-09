@@ -187,6 +187,59 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3898200447952154546, guid: cb453ac5b19b7d94cb289634b95f4f84,
+        type: 3}
+      propertyPath: toys.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3898200447952154546, guid: cb453ac5b19b7d94cb289634b95f4f84,
+        type: 3}
+      propertyPath: toys.Array.data[7]
+      value: 
+      objectReference: {fileID: 7768568205481990998, guid: 299ca6721b45bb441a813dc720921af8,
+        type: 3}
+    - target: {fileID: 3898200447952154546, guid: cb453ac5b19b7d94cb289634b95f4f84,
+        type: 3}
+      propertyPath: toys.Array.data[8]
+      value: 
+      objectReference: {fileID: 6054269115471840387, guid: a02f11525db6dd14fab78d6b6279198a,
+        type: 3}
+    - target: {fileID: 3898200447952154546, guid: cb453ac5b19b7d94cb289634b95f4f84,
+        type: 3}
+      propertyPath: toys.Array.data[9]
+      value: 
+      objectReference: {fileID: 9135775279611086699, guid: 715b45563de0c904685a6526a6e5afde,
+        type: 3}
+    - target: {fileID: 3898200447952154546, guid: cb453ac5b19b7d94cb289634b95f4f84,
+        type: 3}
+      propertyPath: toys.Array.data[10]
+      value: 
+      objectReference: {fileID: 7780069055416714584, guid: b72f266a897dda54a84fe19257261ad5,
+        type: 3}
+    - target: {fileID: 3898200447952154546, guid: cb453ac5b19b7d94cb289634b95f4f84,
+        type: 3}
+      propertyPath: toys.Array.data[11]
+      value: 
+      objectReference: {fileID: 8941144071448135791, guid: dda7ce76c79b45c4bb0b0c75fc8127a4,
+        type: 3}
+    - target: {fileID: 3898200447952154546, guid: cb453ac5b19b7d94cb289634b95f4f84,
+        type: 3}
+      propertyPath: toys.Array.data[12]
+      value: 
+      objectReference: {fileID: 4936489271552321754, guid: da2dd7d0e0f46e8458d60f1172f2c164,
+        type: 3}
+    - target: {fileID: 3898200447952154546, guid: cb453ac5b19b7d94cb289634b95f4f84,
+        type: 3}
+      propertyPath: toys.Array.data[13]
+      value: 
+      objectReference: {fileID: 305413692337517300, guid: 7eee5daa4fff67342874ed974a8e913d,
+        type: 3}
+    - target: {fileID: 3898200447952154546, guid: cb453ac5b19b7d94cb289634b95f4f84,
+        type: 3}
+      propertyPath: toys.Array.data[14]
+      value: 
+      objectReference: {fileID: 7904259610985932391, guid: c77b4fe24d2df3c4689f7f8bc2befb45,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb453ac5b19b7d94cb289634b95f4f84, type: 3}
 --- !u!1 &221502655
