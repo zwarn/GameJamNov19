@@ -33,7 +33,7 @@ public class ToyChooser : MonoBehaviour
 
     public GameObject getRandomToy()
     {
-        int index = Random.Range(0, availableIndices.Count - 1);    //  Pick random element from the list
+        int index = Random.Range(0, availableIndices.Count);    //  Pick random element from the list
         int i = availableIndices[index];    //  i = the number that was randomly picked
         availableIndices.RemoveAt(index);   //  Remove chosen element
 

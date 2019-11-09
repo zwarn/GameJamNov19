@@ -33,7 +33,8 @@ public class BearController : MonoBehaviour
         {
             Jump();
         }
-
+        
+       
 
         float horizontalMovement = Input.GetAxis("Horizontal") * horizontalMoveSpeed * Time.deltaTime;
 
