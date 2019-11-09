@@ -7,6 +7,7 @@ public class BearCollision : MonoBehaviour
 {
     public float deadlyVelocity = 10f;
     public AudioSource bearJumpSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,7 @@ public class BearCollision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnCollisionEnter2D(Collision2D other)
