@@ -820,7 +820,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490750273}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 3, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 221502658}
@@ -1184,10 +1184,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d398fc0471452947850abe4bd7a8c79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockLayer:
+    serializedVersion: 2
+    m_Bits: 1
   groundSprite: {fileID: 682715310}
   numberOfRays: 33
   blockVelocityThreshhold: 1
-  cameraMoveThreshhold: 1
+  cameraMoveThreshhold: 3
   towerHeight: {fileID: 11400000, guid: e5bf8ea35e685af49a86bf7b00972e89, type: 2}
   cameraFollow: {fileID: 221502660}
   ground: {fileID: 682715308}
