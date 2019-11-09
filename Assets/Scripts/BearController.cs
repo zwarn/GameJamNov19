@@ -8,6 +8,8 @@ public class BearController : MonoBehaviour
 
     private Collider2D collider;
 
+    public AudioSource bearJumpSource;
+
     [SerializeField]
     private float numberOfRays;
 
@@ -15,13 +17,13 @@ public class BearController : MonoBehaviour
     [SerializeField]
     private float jumpForce, rayLength, horizontalMoveSpeed;
 
+
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
-
-
-
+        var aSources = GetComponents<AudioSource>();
+        bearJumpSource = aSources[1];
     }
 
 
@@ -33,8 +35,8 @@ public class BearController : MonoBehaviour
         {
             Jump();
         }
-        
-       
+
+
 
         float horizontalMovement = Input.GetAxis("Horizontal") * horizontalMoveSpeed * Time.deltaTime;
 
@@ -60,11 +62,10 @@ public class BearController : MonoBehaviour
     private void Jump()
     {
 
-        if (IsStandingOnGround())
+        if (IsStandingOnGround()) {
             body.AddForce(Vector2.up * jumpForce);
-
-
-
+            bearJumpSource.Play();
+        }
     }
 
 
