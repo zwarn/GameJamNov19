@@ -15,6 +15,7 @@ public class Obstacle : MonoBehaviour
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+        GetComponent<Collider2D>().isTrigger = true;
     }
  
     void OnMouseDown()
@@ -35,6 +36,7 @@ public class Obstacle : MonoBehaviour
         
         StartCoroutine(WaitForSpawnDelay());
 
+        GetComponent<Collider2D>().isTrigger = false;
         rigidbody2D.gravityScale = 0.5f;
     }
  
