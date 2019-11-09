@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject bearPrefab;
     [SerializeField] private GameObject bearPlayerInstance;
     [SerializeField] private Transform bearSpawnTransform;
-    private float playTime;
+    public float playTime;
     
 
 
@@ -33,9 +34,16 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        playTime += Time.deltaTime;
+        
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             PlayerDies();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            GameFinished();
         }
     }
 
@@ -57,6 +65,11 @@ public class GameManager : MonoBehaviour
     public void GameFinished()
     {
         gameFinishedScreen.SetActive(true);
+        Text toyCount = gameFinishedScreen.transform.Find("Toy counts Text").GetComponent<Text>();
+        Text time = gameFinishedScreen.transform.Find("Time").GetComponent<Text>();
+
+        toyCount.text = "Toy count: " + ObstacleSpawner.toyCount;
+        time.text = "Time: " + playTime;
     }
 
     public static GameManager Instance { get => instance; }
