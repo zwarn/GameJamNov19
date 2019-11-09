@@ -10,7 +10,9 @@
           <e p="BearCollision.cs" t="Include" />
           <e p="BearController.cs" t="Include" />
           <e p="FollowCamera.cs" t="Include" />
-          <e p="ObstacleChooser.cs" t="Include" />
+          <e p="Obstacle.cs" t="Include" />
+          <e p="ObstacleSpawner.cs" t="Include" />
+          <e p="TowerHeightChecker.cs" t="Include" />
           <e p="ToyChooser.cs" t="Include" />
         </e>
       </e>
