@@ -22,13 +22,32 @@ public class ToyChooser : MonoBehaviour
             Debug.LogError("ToyChooser already present");
         }
     }
+
+    void Start()
+    {
+        ReinitAvailableIndices();
+    }
     
     public List<GameObject> toys;
+    List<int> availableIndices = new List<int>();   //  Declare list
 
     public GameObject getRandomToy()
     {
-        int choice = Random.Range(0, toys.Count);
-        return toys[choice];
+        int index = Random.Range(0, availableIndices.Count - 1);    //  Pick random element from the list
+        int i = availableIndices[index];    //  i = the number that was randomly picked
+        availableIndices.RemoveAt(index);   //  Remove chosen element
+
+        return toys[i];
+    }
+
+    public void ReinitAvailableIndices()
+    {
+        availableIndices = new List<int>();
+
+        for (int i = 0; i < toys.Count; i++)
+        {
+            availableIndices.Add(i);
+        }
     }
     
 }
