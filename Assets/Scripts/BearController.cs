@@ -8,7 +8,8 @@ public class BearController : MonoBehaviour
 
     private Collider2D collider;
 
-    public AudioSource bearJumpSource;
+    public AudioSource bearJumpsSource;
+    public AudioSource bearDiesSource;
 
     [SerializeField]
     private float numberOfRays;
@@ -23,7 +24,8 @@ public class BearController : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
         var aSources = GetComponents<AudioSource>();
-        bearJumpSource = aSources[1];
+        bearJumpsSource = aSources[1];
+        bearDiesSource = aSources[2];
     }
 
 
@@ -53,6 +55,7 @@ public class BearController : MonoBehaviour
         Rect cameraRect = Camera.main.rect;
         if (transform.position.y < Camera.main.ScreenToWorldPoint(new Vector3(0, cameraRect.yMax)).y)
         {
+            bearDiesSource.Play();
             GameManager.Instance.PlayerDies();
         }
     }
@@ -64,7 +67,7 @@ public class BearController : MonoBehaviour
 
         if (IsStandingOnGround()) {
             body.AddForce(Vector2.up * jumpForce);
-            bearJumpSource.Play();
+            bearJumpsSource.Play();
         }
     }
 
