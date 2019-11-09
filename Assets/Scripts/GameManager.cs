@@ -11,9 +11,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject bearPlayerInstance;
     [SerializeField] private Transform bearSpawnTransform;
 
+
+    [SerializeField]
+    private FloatReference towerHeight;
+
     void Awake()
     {
         instance = this;
+        towerHeight.Reset();
     }
 
     // Start is called before the first frame update
@@ -36,6 +41,7 @@ public class GameManager : MonoBehaviour
         Destroy(bearPlayerInstance);
         gameOverScreen.SetActive(true);
         StartCoroutine(RespawnPlayer());
+        towerHeight.Reset();
     }
 
     private IEnumerator RespawnPlayer()
