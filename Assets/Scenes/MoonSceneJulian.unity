@@ -261,6 +261,7 @@ GameObject:
   - component: {fileID: 1970751419}
   - component: {fileID: 1970751418}
   - component: {fileID: 1970751417}
+  - component: {fileID: 1970751421}
   m_Layer: 0
   m_Name: MockBear
   m_TagString: Untagged
@@ -309,7 +310,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -378,6 +379,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1970751421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970751416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b11ffe239a79ab34491243eed129cde0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfRays: 4
+  jumpForce: 300
+  rayLength: 0.15
+  horizontalMoveSpeed: 0
 --- !u!1 &2032748874
 GameObject:
   m_ObjectHideFlags: 0
