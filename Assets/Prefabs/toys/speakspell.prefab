@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7975811408703731033}
   - component: {fileID: 371913554315413162}
   - component: {fileID: -707075279247684845}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: speakspell
   m_TagString: block
   m_Icon: {fileID: 0}
