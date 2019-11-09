@@ -29,6 +29,7 @@ public class TowerHeightChecker : MonoBehaviour
 
     private float distanceToGround;
 
+    private float groundHeight;
 
 
 
@@ -40,6 +41,7 @@ public class TowerHeightChecker : MonoBehaviour
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        groundHeight = groundSprite.transform.position.y + groundSprite.bounds.extents.y;
     }
 
 
@@ -56,8 +58,7 @@ public class TowerHeightChecker : MonoBehaviour
 
         Vector2 rayOrigin = transform.position + new Vector3(-spriteRenderer.bounds.extents.x, -spriteRenderer.bounds.extents.y, 0.0f);
 
-        float groundHeight = groundSprite.transform.position.y + groundSprite.bounds.extents.y;
-        distanceToGround = ground.transform.position.y + spriteRenderer.transform.position.y;
+        distanceToGround = spriteRenderer.transform.position.y - groundHeight;
 
 
         float shortestRay = distanceToGround;
@@ -80,10 +81,10 @@ public class TowerHeightChecker : MonoBehaviour
 
                     //checkOtherToo
                     Rigidbody2D blockRigidBoy = hit.transform.gameObject.GetComponent<Rigidbody2D>();
-                if (blockRigidBoy != null)
+                if(blockRigidBoy != null)
                 {
 
-
+                
 
 
                     if (blockRigidBoy.velocity.x < blockVelocityThreshhold && blockRigidBoy.velocity.y < blockVelocityThreshhold)
@@ -95,7 +96,7 @@ public class TowerHeightChecker : MonoBehaviour
                         }
 
                     }
-                }
+                    }
                
             }
 

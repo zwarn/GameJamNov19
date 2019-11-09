@@ -125,7 +125,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 221502658}
     m_Modifications:
     - target: {fileID: 3898200447952154548, guid: cb453ac5b19b7d94cb289634b95f4f84,
         type: 3}
@@ -145,22 +145,22 @@ PrefabInstance:
     - target: {fileID: 3898200447952154549, guid: cb453ac5b19b7d94cb289634b95f4f84,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3898200447952154549, guid: cb453ac5b19b7d94cb289634b95f4f84,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3898200447952154549, guid: cb453ac5b19b7d94cb289634b95f4f84,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3898200447952154549, guid: cb453ac5b19b7d94cb289634b95f4f84,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3898200447952154549, guid: cb453ac5b19b7d94cb289634b95f4f84,
         type: 3}
@@ -170,7 +170,7 @@ PrefabInstance:
     - target: {fileID: 3898200447952154549, guid: cb453ac5b19b7d94cb289634b95f4f84,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3898200447952154549, guid: cb453ac5b19b7d94cb289634b95f4f84,
         type: 3}
@@ -327,6 +327,7 @@ Transform:
   - {fileID: 1984855927}
   - {fileID: 682715309}
   - {fileID: 1490750274}
+  - {fileID: 1183798324}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -504,7 +505,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &349580736
 GameObject:
@@ -609,7 +610,7 @@ Transform:
   m_LocalScale: {x: 27, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &682715308
 GameObject:
@@ -691,6 +692,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1183798324 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3898200447952154549, guid: cb453ac5b19b7d94cb289634b95f4f84,
+    type: 3}
+  m_PrefabInstance: {fileID: 23659204}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1468843511
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,7 +801,7 @@ Transform:
   m_LocalScale: {x: 27, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &1490750273
 GameObject:
@@ -876,7 +883,7 @@ PrefabInstance:
     - target: {fileID: 5721050370833934133, guid: d1f54fa17c4d43241bf8862510130c1b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5721050370833934133, guid: d1f54fa17c4d43241bf8862510130c1b,
         type: 3}
@@ -1013,7 +1020,7 @@ Transform:
   m_LocalScale: {x: 27, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1945946006
 PrefabInstance:
@@ -1065,7 +1072,7 @@ PrefabInstance:
     - target: {fileID: 8242593487319074271, guid: 8e0c50a0c7bf6384191f6a2067b85f52,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8242593487319074271, guid: 8e0c50a0c7bf6384191f6a2067b85f52,
         type: 3}
@@ -1190,7 +1197,7 @@ MonoBehaviour:
   groundSprite: {fileID: 682715310}
   numberOfRays: 33
   blockVelocityThreshhold: 1
-  cameraMoveThreshhold: 3
+  cameraMoveThreshhold: 6
   towerHeight: {fileID: 11400000, guid: e5bf8ea35e685af49a86bf7b00972e89, type: 2}
   cameraFollow: {fileID: 221502660}
   ground: {fileID: 682715308}
